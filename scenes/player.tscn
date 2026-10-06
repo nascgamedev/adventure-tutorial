@@ -421,6 +421,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2kixx"]
+size = Vector2(10.75, 8)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jl4tf"]
 size = Vector2(15, 15)
 
@@ -434,15 +437,28 @@ animation = &"attack_right"
 autoplay = "idle_right"
 frame = 1
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1881963285]
+position = Vector2(-0.625, 5.5)
+shape = SubResource("RectangleShape2D_2kixx")
+
 [node name="SwingSword" type="AudioStreamPlayer2D" parent="." unique_id=359888787]
 stream = ExtResource("3_qhqgy")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1125372802]
 position = Vector2(7.5, -0.5)
+collision_mask = 2
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=909094240]
 shape = SubResource("RectangleShape2D_jl4tf")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1086019287]
+limit_left = 0
+limit_top = 0
+limit_right = 2752
+limit_bottom = 1664
+position_smoothing_enabled = true
+position_smoothing_speed = 4.0
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
