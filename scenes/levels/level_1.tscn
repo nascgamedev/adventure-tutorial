@@ -1,5 +1,9 @@
 [gd_scene format=3 uid="uid://bs35cdv4hgfn2"]
 
 [ext_resource type="PackedScene" uid="uid://d2lal7bahtysb" path="res://scenes/levels/base_level.tscn" id="1_ksju7"]
+[ext_resource type="PackedScene" uid="uid://b1eyq2dooey2l" path="res://scenes/slime.tscn" id="2_6iamk"]
 
 [node name="LevelRoot" unique_id=183229931 instance=ExtResource("1_ksju7")]
+
+[node name="Slime2" parent="Enemies" parent_id_path=PackedInt32Array(1385103506) index="1" unique_id=271254273 instance=ExtResource("2_6iamk")]
+position = Vector2(1853, 1014)

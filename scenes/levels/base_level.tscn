@@ -217,3 +217,5 @@ metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Exit" unique_id=1602713940]
 shape = SubResource("RectangleShape2D_jl4tf")
+
+[node name="Items" type="Node2D" parent="." unique_id=293238455]
